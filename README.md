@@ -1,9 +1,9 @@
 # Jenkins Setup with Terraform and Ansible
-***
+
 This project deploys a Jenkins server on AWS, configure's the server with all required dependencies and outputs using Terraform and Ansible.
 !Notice you'll likely need to change the instance type depending your jenkins pipelines, projects, etc.
 ## Requirements
-***
+
 - AWS IAM User with Administrator Access permission and promgrammatic access.
 - AWS Key-pair
 - AWS CLI
@@ -16,7 +16,7 @@ This project deploys a Jenkins server on AWS, configure's the server with all re
 - I'll also be implementing the vs code in my OS to edit my code.
 
 # Installation
-***
+
 ## Terraform
 https://learn.hashicorp.com/tutorials/terraform/install-cli
 • Ensure that your system is up to date, and you have the gnupg, software-properties-common, and curl packages installed. You will use these packages to verify HashiCorp's GPG signature, and install HashiCorp's Debian package repository.
@@ -86,7 +86,7 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 - `sudo apt install ansible`
 
 # Procedure
-***
+
 ## AWS Configurations
 
 • After creating your user that has programmatic access to with permissions to services you will be deploying on AWS, you grab the public and private keys that you got after creating the user and insert the name of the user you created in the following. 
@@ -368,7 +368,7 @@ become_ask_pass=false
 
 
 # Deploy Jenkins using Terraform and Ansible
-***
+
 • So our Terraform directory should be looking like the following.
 - install-jenkins
     - `ansible.cfg`
@@ -423,7 +423,7 @@ Upon completion you can click on the output of terraform in your terminal and pa
 
 
 # Cleaning Up
-***
+
 • Now that we’ve tested our code and we’re all done we can clean up our lab so we can be charged the minimal.
 
 • Terraform clean up
@@ -440,5 +440,5 @@ Upon completion you can click on the output of terraform in your terminal and pa
 
 
 # License
-***
+
 MIT
