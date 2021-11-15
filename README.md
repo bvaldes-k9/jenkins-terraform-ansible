@@ -140,11 +140,11 @@ $ ssh-keygen -y -f ~/.ssh/MyKeyPair.pem > ~/.ssh/MyKeyPair.pub
 • We'll be using the resources and modules from [terraform registry for aws modules](https://registry.terraform.io/providers/hashicorp/aws/latest)
 
 • We start with creating several files for our project applying the modules from terraform to them.
-    - `main.tf`
-    - `outputs.tf`
-    - `provider.tf`
-    - `terraform.tf`
-    - `variable.tf`
+- `main.tf`
+- `outputs.tf`
+- `provider.tf`
+- `terraform.tf`
+- `variable.tf`
 
 main
 `main.tf`
@@ -184,6 +184,8 @@ resource "aws_subnet" "my_subnet" {
 }
 ```
 • `availability_zone` is slightly different to the variable we have for our region. You may change this to your use case of what AZ your planning to deploy in.
+
+• The `aws_security_group` have been seperated into individual ids instead of one large id, for more specific assigning in case you were to add more instances and only want specific ports associated.
 
 • For `Provisioner's` incase you changed your EC2 resource name ensure to update it here where you see jenkins-ci and to also update all `host =` with the updated resource name.
 ```
